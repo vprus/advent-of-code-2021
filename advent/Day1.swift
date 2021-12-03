@@ -73,16 +73,20 @@ struct Day1 {
                 }
             })
             .slidingWindows(3)
-            .map({w in w[0] + w[1] + w[2]})
+            .map({w -> Int in w[0] + w[1] + w[2]})
             .slidingWindows(2)
-            // The line below results in:
-            // The compiler is unable to type-check this expression in reasonable time;
-            // try breaking up the expression into distinct sub-expressions
-            .map({w in w[1] - w[0]})
+            // Without explicit types, the code below results in:
+            //     The compiler is unable to type-check this expression in reasonable time;
+            //     try breaking up the expression into distinct sub-expressions
+            .map({(w: [Int]) -> Int in
+                if w[1] > w[0] {
+                    return 1
+                } else {
+                    return 0
+                }
+            })
             
-            for try await w in windows {
-                print(w)
-            }            
+            print(try await windows.reduce(0, {a, b in a + b}))
         } else {
             print("Could not parse URL")
         }

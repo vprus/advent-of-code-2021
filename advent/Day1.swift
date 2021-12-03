@@ -56,11 +56,6 @@ extension AsyncSequence {
     }
 }
 
-enum Errors: Error {
-    case parseError(input: String)
-}
-
-@main
 struct Day1 {
     static func main() async throws {
         

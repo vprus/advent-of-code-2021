@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>advent-tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>advent.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>E7A0A5A12758E9F5007ECD19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E7A0A5C0275A2EC3007ECD19</key>
 		<dict>
 			<key>primary</key>

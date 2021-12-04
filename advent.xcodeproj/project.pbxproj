@@ -12,6 +12,7 @@
 		E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B0275A0B27007ECD19 /* Main.swift */; };
 		E7A0A5B3275A1EB0007ECD19 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B2275A1EB0007ECD19 /* Day3.swift */; };
 		E7A0A5B5275A212F007ECD19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B4275A212F007ECD19 /* Utils.swift */; };
+		E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5D8275B9209007ECD19 /* Day4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		E7A0A5B4275A212F007ECD19 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E7A0A5B9275A2E59007ECD19 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E7A0A5D1275A7673007ECD19 /* advent_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_tests.swift; sourceTree = "<group>"; };
+		E7A0A5D8275B9209007ECD19 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				E7A0A5B0275A0B27007ECD19 /* Main.swift */,
 				E7A0A5B2275A1EB0007ECD19 /* Day3.swift */,
 				E7A0A5B4275A212F007ECD19 /* Utils.swift */,
+				E7A0A5D8275B9209007ECD19 /* Day4.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A0A5B5275A212F007ECD19 /* Utils.swift in Sources */,
+				E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */,
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
 				E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */,
 				E7A0A5B3275A1EB0007ECD19 /* Day3.swift in Sources */,

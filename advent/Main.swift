@@ -10,6 +10,6 @@ import Foundation
 @main
 struct Main {
     static func main() async throws {
-        try await Day4.main()
+        try day5()
     }
 }

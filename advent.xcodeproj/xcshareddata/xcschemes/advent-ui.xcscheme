@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7A0A5A12758E9F5007ECD19"
-               BuildableName = "advent"
-               BlueprintName = "advent"
+               BlueprintIdentifier = "E7A0A5E7275F4777007ECD19"
+               BuildableName = "advent-ui.app"
+               BlueprintName = "advent-ui"
                ReferencedContainer = "container:advent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7A0A5CE275A7673007ECD19"
-               BuildableName = "advent-tests.xctest"
-               BlueprintName = "advent-tests"
+               BlueprintIdentifier = "E7A0A601275F477B007ECD19"
+               BuildableName = "advent-uiUITests.xctest"
+               BlueprintName = "advent-uiUITests"
+               ReferencedContainer = "container:advent.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E7A0A5F7275F477B007ECD19"
+               BuildableName = "advent-uiTests.xctest"
+               BlueprintName = "advent-uiTests"
                ReferencedContainer = "container:advent.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -55,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E7A0A5A12758E9F5007ECD19"
-            BuildableName = "advent"
-            BlueprintName = "advent"
+            BlueprintIdentifier = "E7A0A5E7275F4777007ECD19"
+            BuildableName = "advent-ui.app"
+            BlueprintName = "advent-ui"
             ReferencedContainer = "container:advent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,9 +82,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E7A0A5A12758E9F5007ECD19"
-            BuildableName = "advent"
-            BlueprintName = "advent"
+            BlueprintIdentifier = "E7A0A5E7275F4777007ECD19"
+            BuildableName = "advent-ui.app"
+            BlueprintName = "advent-ui"
             ReferencedContainer = "container:advent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

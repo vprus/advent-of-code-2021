@@ -1,6 +1,6 @@
 # Advent of Code 2021
 
-This repository contains for for Advent of Code 2021 in Swift, and below are some notes about what I've
+This repository contains code for Advent of Code 2021 in Swift. , and below are some notes about what I've
 learned about the language.
 
 ## Day 1
@@ -28,3 +28,12 @@ C++ closed-open ranges are generally easier to work with.
 Swift does not appear to have native regular expression, and `NSRegularExpression` is awkward to use. I also miss
 `Iterator.iterate` from Scala and `Sequence.take`. Generally, it starts to feel that Swift `Sequence` is way too lean.
 
+## Conclusions
+
+What I'd like from Swift
+
+- Native regular expression, ideally integrated with matching (though this part might not be possible).
+- After using Scala, the fact that `if` is not an expression is disappointing.
+- More methods in the `Sequence` class (although swift-algorithms package fills some gaps)
+- Replacement 
+- Would be nice to have an equivalent of Python's `defaultdict`

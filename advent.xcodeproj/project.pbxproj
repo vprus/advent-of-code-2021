@@ -26,6 +26,8 @@
 		E7A0A609275F477B007ECD19 /* advent_uiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A608275F477B007ECD19 /* advent_uiUITestsLaunchTests.swift */; };
 		E7A0A614275F4B0A007ECD19 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = E7A0A613275F4B0A007ECD19 /* Algorithms */; };
 		E7A0A615275FCCE6007ECD19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B4275A212F007ECD19 /* Utils.swift */; };
+		E7A0A61727610CFA007ECD19 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61627610CFA007ECD19 /* Day8.swift */; };
+		E7A0A6192761D823007ECD19 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6182761D823007ECD19 /* Day9.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		E7A0A602275F477B007ECD19 /* advent-uiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "advent-uiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0A606275F477B007ECD19 /* advent_uiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_uiUITests.swift; sourceTree = "<group>"; };
 		E7A0A608275F477B007ECD19 /* advent_uiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_uiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7A0A61627610CFA007ECD19 /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
+		E7A0A6182761D823007ECD19 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				E7A0A5DA275CAD46007ECD19 /* Day5.swift */,
 				E7A0A5DD275DF527007ECD19 /* Day6.swift */,
 				E7A0A5DF275F38A9007ECD19 /* Day7.swift */,
+				E7A0A61627610CFA007ECD19 /* Day8.swift */,
+				E7A0A6182761D823007ECD19 /* Day9.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -373,10 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A0A5B5275A212F007ECD19 /* Utils.swift in Sources */,
+				E7A0A61727610CFA007ECD19 /* Day8.swift in Sources */,
 				E7A0A5DE275DF527007ECD19 /* Day6.swift in Sources */,
 				E7A0A5DB275CAD46007ECD19 /* Day5.swift in Sources */,
 				E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */,
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
+				E7A0A6192761D823007ECD19 /* Day9.swift in Sources */,
 				E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */,
 				E7A0A5B3275A1EB0007ECD19 /* Day3.swift in Sources */,
 				E7A0A5E0275F38A9007ECD19 /* Day7.swift in Sources */,

@@ -28,6 +28,20 @@ C++ closed-open ranges are generally easier to work with.
 Swift does not appear to have native regular expression, and `NSRegularExpression` is awkward to use. I also miss
 `Iterator.iterate` from Scala and `Sequence.take`. Generally, it starts to feel that Swift `Sequence` is way too lean.
 
+## Day 8
+
+Converting of pairs to map with `Dictionary(uniqueKeysAndValues:)` is to heavy-weight, compared to `toMap` in Scala.
+
+## Day 9
+
+Tried to look for swift array library. Swift-numerics does not even have arrays. Tensorflow/Swift is archived. 
+
+Tuple is not `Hashable`, so you can't have `Set<(Int, Int>)`
+
+I wish there are shorter syntax for data structures, similar to case classes in Scala and data classes in Kotlin.
+
+
+
 ## Conclusions
 
 What I'd like from Swift

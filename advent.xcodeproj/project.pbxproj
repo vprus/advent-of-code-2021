@@ -28,6 +28,9 @@
 		E7A0A615275FCCE6007ECD19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B4275A212F007ECD19 /* Utils.swift */; };
 		E7A0A61727610CFA007ECD19 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61627610CFA007ECD19 /* Day8.swift */; };
 		E7A0A6192761D823007ECD19 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6182761D823007ECD19 /* Day9.swift */; };
+		E7A0A61B27627A1A007ECD19 /* day9-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A61A27627A19007ECD19 /* day9-input.txt */; };
+		E7A0A61E27627B25007ECD19 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61D27627B25007ECD19 /* Day9.swift */; };
+		E7A0A62027633763007ECD19 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61F27633763007ECD19 /* Day10.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		E7A0A608275F477B007ECD19 /* advent_uiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_uiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E7A0A61627610CFA007ECD19 /* Day8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day8.swift; sourceTree = "<group>"; };
 		E7A0A6182761D823007ECD19 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
+		E7A0A61A27627A19007ECD19 /* day9-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day9-input.txt"; sourceTree = "<group>"; };
+		E7A0A61D27627B25007ECD19 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
+		E7A0A61F27633763007ECD19 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 				E7A0A5DF275F38A9007ECD19 /* Day7.swift */,
 				E7A0A61627610CFA007ECD19 /* Day8.swift */,
 				E7A0A6182761D823007ECD19 /* Day9.swift */,
+				E7A0A61F27633763007ECD19 /* Day10.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -184,11 +191,13 @@
 		E7A0A5E9275F4777007ECD19 /* advent-ui */ = {
 			isa = PBXGroup;
 			children = (
+				E7A0A61C27627AA0007ECD19 /* Resources */,
 				E7A0A5EA275F4777007ECD19 /* advent_uiApp.swift */,
 				E7A0A5EC275F4777007ECD19 /* Day7.swift */,
 				E7A0A5EE275F477B007ECD19 /* Assets.xcassets */,
 				E7A0A5F3275F477B007ECD19 /* advent_ui.entitlements */,
 				E7A0A5F0275F477B007ECD19 /* Preview Content */,
+				E7A0A61D27627B25007ECD19 /* Day9.swift */,
 			);
 			path = "advent-ui";
 			sourceTree = "<group>";
@@ -216,6 +225,14 @@
 				E7A0A608275F477B007ECD19 /* advent_uiUITestsLaunchTests.swift */,
 			);
 			path = "advent-uiUITests";
+			sourceTree = "<group>";
+		};
+		E7A0A61C27627AA0007ECD19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0A61A27627A19007ECD19 /* day9-input.txt */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A0A61B27627A1A007ECD19 /* day9-input.txt in Resources */,
 				E7A0A5F2275F477B007ECD19 /* Preview Assets.xcassets in Resources */,
 				E7A0A5EF275F477B007ECD19 /* Assets.xcassets in Resources */,
 			);
@@ -383,6 +401,7 @@
 				E7A0A5DE275DF527007ECD19 /* Day6.swift in Sources */,
 				E7A0A5DB275CAD46007ECD19 /* Day5.swift in Sources */,
 				E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */,
+				E7A0A62027633763007ECD19 /* Day10.swift in Sources */,
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
 				E7A0A6192761D823007ECD19 /* Day9.swift in Sources */,
 				E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */,
@@ -396,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A0A61E27627B25007ECD19 /* Day9.swift in Sources */,
 				E7A0A5ED275F4777007ECD19 /* Day7.swift in Sources */,
 				E7A0A5EB275F4777007ECD19 /* advent_uiApp.swift in Sources */,
 				E7A0A615275FCCE6007ECD19 /* Utils.swift in Sources */,

@@ -3,9 +3,10 @@ import SwiftUI
 
 @main
 struct advent_uiApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            Day7().frame(width: 640, height: 320).padding()
+            Day9().frame(width: 1000, height: 1000).padding()
         }
     }
 }

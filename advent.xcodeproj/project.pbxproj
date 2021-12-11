@@ -31,6 +31,17 @@
 		E7A0A61B27627A1A007ECD19 /* day9-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A61A27627A19007ECD19 /* day9-input.txt */; };
 		E7A0A61E27627B25007ECD19 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61D27627B25007ECD19 /* Day9.swift */; };
 		E7A0A62027633763007ECD19 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A61F27633763007ECD19 /* Day10.swift */; };
+		E7A0A6222764AB58007ECD19 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6212764AB57007ECD19 /* Day11.swift */; };
+		E7A0A62F2764B6A9007ECD19 /* advent_ui_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A62E2764B6A9007ECD19 /* advent_ui_iosApp.swift */; };
+		E7A0A6312764B6A9007ECD19 /* Day11UIv2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6302764B6A9007ECD19 /* Day11UIv2.swift */; };
+		E7A0A6332764B6AC007ECD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A6322764B6AC007ECD19 /* Assets.xcassets */; };
+		E7A0A6362764B6AC007ECD19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0A6352764B6AC007ECD19 /* Preview Assets.xcassets */; };
+		E7A0A6402764B6AC007ECD19 /* advent_ui_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A63F2764B6AC007ECD19 /* advent_ui_iosTests.swift */; };
+		E7A0A64A2764B6AC007ECD19 /* advent_ui_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6492764B6AC007ECD19 /* advent_ui_iosUITests.swift */; };
+		E7A0A64C2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A64B2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift */; };
+		E7A0A6572764B6C2007ECD19 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6212764AB57007ECD19 /* Day11.swift */; };
+		E7A0A65B2764B750007ECD19 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = E7A0A65A2764B750007ECD19 /* Algorithms */; };
+		E7A0A65C2764B769007ECD19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B4275A212F007ECD19 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = E7A0A5E7275F4777007ECD19;
 			remoteInfo = "advent-ui";
+		};
+		E7A0A63C2764B6AC007ECD19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A0A59A2758E9F5007ECD19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A0A62B2764B6A9007ECD19;
+			remoteInfo = "advent-ui-ios";
+		};
+		E7A0A6462764B6AC007ECD19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A0A59A2758E9F5007ECD19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A0A62B2764B6A9007ECD19;
+			remoteInfo = "advent-ui-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -92,6 +117,17 @@
 		E7A0A61A27627A19007ECD19 /* day9-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day9-input.txt"; sourceTree = "<group>"; };
 		E7A0A61D27627B25007ECD19 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 		E7A0A61F27633763007ECD19 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
+		E7A0A6212764AB57007ECD19 /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
+		E7A0A62C2764B6A9007ECD19 /* advent-ui-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "advent-ui-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A0A62E2764B6A9007ECD19 /* advent_ui_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosApp.swift; sourceTree = "<group>"; };
+		E7A0A6302764B6A9007ECD19 /* Day11UIv2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11UIv2.swift; sourceTree = "<group>"; };
+		E7A0A6322764B6AC007ECD19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7A0A6352764B6AC007ECD19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7A0A63B2764B6AC007ECD19 /* advent-ui-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "advent-ui-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A0A63F2764B6AC007ECD19 /* advent_ui_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosTests.swift; sourceTree = "<group>"; };
+		E7A0A6452764B6AC007ECD19 /* advent-ui-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "advent-ui-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A0A6492764B6AC007ECD19 /* advent_ui_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosUITests.swift; sourceTree = "<group>"; };
+		E7A0A64B2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +161,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7A0A6292764B6A9007ECD19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A0A65B2764B750007ECD19 /* Algorithms in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6382764B6AC007ECD19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6422764B6AC007ECD19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,6 +195,9 @@
 				E7A0A5E9275F4777007ECD19 /* advent-ui */,
 				E7A0A5FB275F477B007ECD19 /* advent-uiTests */,
 				E7A0A605275F477B007ECD19 /* advent-uiUITests */,
+				E7A0A62D2764B6A9007ECD19 /* advent-ui-ios */,
+				E7A0A63E2764B6AC007ECD19 /* advent-ui-iosTests */,
+				E7A0A6482764B6AC007ECD19 /* advent-ui-iosUITests */,
 				E7A0A5A32758E9F5007ECD19 /* Products */,
 				E7A0A5B8275A2E59007ECD19 /* Frameworks */,
 			);
@@ -149,6 +210,9 @@
 				E7A0A5E8275F4777007ECD19 /* advent-ui.app */,
 				E7A0A5F8275F477B007ECD19 /* advent-uiTests.xctest */,
 				E7A0A602275F477B007ECD19 /* advent-uiUITests.xctest */,
+				E7A0A62C2764B6A9007ECD19 /* advent-ui-ios.app */,
+				E7A0A63B2764B6AC007ECD19 /* advent-ui-iosTests.xctest */,
+				E7A0A6452764B6AC007ECD19 /* advent-ui-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +232,7 @@
 				E7A0A61627610CFA007ECD19 /* Day8.swift */,
 				E7A0A6182761D823007ECD19 /* Day9.swift */,
 				E7A0A61F27633763007ECD19 /* Day10.swift */,
+				E7A0A6212764AB57007ECD19 /* Day11.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -233,6 +298,42 @@
 				E7A0A61A27627A19007ECD19 /* day9-input.txt */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7A0A62D2764B6A9007ECD19 /* advent-ui-ios */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0A62E2764B6A9007ECD19 /* advent_ui_iosApp.swift */,
+				E7A0A6302764B6A9007ECD19 /* Day11UIv2.swift */,
+				E7A0A6322764B6AC007ECD19 /* Assets.xcassets */,
+				E7A0A6342764B6AC007ECD19 /* Preview Content */,
+			);
+			path = "advent-ui-ios";
+			sourceTree = "<group>";
+		};
+		E7A0A6342764B6AC007ECD19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0A6352764B6AC007ECD19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7A0A63E2764B6AC007ECD19 /* advent-ui-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0A63F2764B6AC007ECD19 /* advent_ui_iosTests.swift */,
+			);
+			path = "advent-ui-iosTests";
+			sourceTree = "<group>";
+		};
+		E7A0A6482764B6AC007ECD19 /* advent-ui-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0A6492764B6AC007ECD19 /* advent_ui_iosUITests.swift */,
+				E7A0A64B2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift */,
+			);
+			path = "advent-ui-iosUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +415,62 @@
 			productReference = E7A0A602275F477B007ECD19 /* advent-uiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E7A0A62B2764B6A9007ECD19 /* advent-ui-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A0A64D2764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-ios" */;
+			buildPhases = (
+				E7A0A6282764B6A9007ECD19 /* Sources */,
+				E7A0A6292764B6A9007ECD19 /* Frameworks */,
+				E7A0A62A2764B6A9007ECD19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "advent-ui-ios";
+			packageProductDependencies = (
+				E7A0A65A2764B750007ECD19 /* Algorithms */,
+			);
+			productName = "advent-ui-ios";
+			productReference = E7A0A62C2764B6A9007ECD19 /* advent-ui-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7A0A63A2764B6AC007ECD19 /* advent-ui-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A0A6502764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-iosTests" */;
+			buildPhases = (
+				E7A0A6372764B6AC007ECD19 /* Sources */,
+				E7A0A6382764B6AC007ECD19 /* Frameworks */,
+				E7A0A6392764B6AC007ECD19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7A0A63D2764B6AC007ECD19 /* PBXTargetDependency */,
+			);
+			name = "advent-ui-iosTests";
+			productName = "advent-ui-iosTests";
+			productReference = E7A0A63B2764B6AC007ECD19 /* advent-ui-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7A0A6442764B6AC007ECD19 /* advent-ui-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A0A6532764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-iosUITests" */;
+			buildPhases = (
+				E7A0A6412764B6AC007ECD19 /* Sources */,
+				E7A0A6422764B6AC007ECD19 /* Frameworks */,
+				E7A0A6432764B6AC007ECD19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7A0A6472764B6AC007ECD19 /* PBXTargetDependency */,
+			);
+			name = "advent-ui-iosUITests";
+			productName = "advent-ui-iosUITests";
+			productReference = E7A0A6452764B6AC007ECD19 /* advent-ui-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,6 +495,17 @@
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = E7A0A5E7275F4777007ECD19;
 					};
+					E7A0A62B2764B6A9007ECD19 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					E7A0A63A2764B6AC007ECD19 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E7A0A62B2764B6A9007ECD19;
+					};
+					E7A0A6442764B6AC007ECD19 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E7A0A62B2764B6A9007ECD19;
+					};
 				};
 			};
 			buildConfigurationList = E7A0A59D2758E9F5007ECD19 /* Build configuration list for PBXProject "advent" */;
@@ -360,6 +528,9 @@
 				E7A0A5E7275F4777007ECD19 /* advent-ui */,
 				E7A0A5F7275F477B007ECD19 /* advent-uiTests */,
 				E7A0A601275F477B007ECD19 /* advent-uiUITests */,
+				E7A0A62B2764B6A9007ECD19 /* advent-ui-ios */,
+				E7A0A63A2764B6AC007ECD19 /* advent-ui-iosTests */,
+				E7A0A6442764B6AC007ECD19 /* advent-ui-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +560,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7A0A62A2764B6A9007ECD19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A0A6362764B6AC007ECD19 /* Preview Assets.xcassets in Resources */,
+				E7A0A6332764B6AC007ECD19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6392764B6AC007ECD19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6432764B6AC007ECD19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -397,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A0A5B5275A212F007ECD19 /* Utils.swift in Sources */,
+				E7A0A6222764AB58007ECD19 /* Day11.swift in Sources */,
 				E7A0A61727610CFA007ECD19 /* Day8.swift in Sources */,
 				E7A0A5DE275DF527007ECD19 /* Day6.swift in Sources */,
 				E7A0A5DB275CAD46007ECD19 /* Day5.swift in Sources */,
@@ -439,6 +634,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7A0A6282764B6A9007ECD19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A0A65C2764B769007ECD19 /* Utils.swift in Sources */,
+				E7A0A6312764B6A9007ECD19 /* Day11UIv2.swift in Sources */,
+				E7A0A6572764B6C2007ECD19 /* Day11.swift in Sources */,
+				E7A0A62F2764B6A9007ECD19 /* advent_ui_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6372764B6AC007ECD19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A0A6402764B6AC007ECD19 /* advent_ui_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A0A6412764B6AC007ECD19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A0A64C2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift in Sources */,
+				E7A0A64A2764B6AC007ECD19 /* advent_ui_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -451,6 +674,16 @@
 			isa = PBXTargetDependency;
 			target = E7A0A5E7275F4777007ECD19 /* advent-ui */;
 			targetProxy = E7A0A603275F477B007ECD19 /* PBXContainerItemProxy */;
+		};
+		E7A0A63D2764B6AC007ECD19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A0A62B2764B6A9007ECD19 /* advent-ui-ios */;
+			targetProxy = E7A0A63C2764B6AC007ECD19 /* PBXContainerItemProxy */;
+		};
+		E7A0A6472764B6AC007ECD19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A0A62B2764B6A9007ECD19 /* advent-ui-ios */;
+			targetProxy = E7A0A6462764B6AC007ECD19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -732,6 +965,169 @@
 			};
 			name = Release;
 		};
+		E7A0A64E2764B6AC007ECD19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"advent-ui-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 66Q43Z3KN7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7A0A64F2764B6AC007ECD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"advent-ui-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 66Q43Z3KN7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7A0A6512764B6AC007ECD19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/advent-ui-ios.app/advent-ui-ios";
+			};
+			name = Debug;
+		};
+		E7A0A6522764B6AC007ECD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/advent-ui-ios.app/advent-ui-ios";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7A0A6542764B6AC007ECD19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "advent-ui-ios";
+			};
+			name = Debug;
+		};
+		E7A0A6552764B6AC007ECD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vladimirprus.advent-ui-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "advent-ui-ios";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -780,6 +1176,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E7A0A64D2764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A0A64E2764B6AC007ECD19 /* Debug */,
+				E7A0A64F2764B6AC007ECD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A0A6502764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A0A6512764B6AC007ECD19 /* Debug */,
+				E7A0A6522764B6AC007ECD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A0A6532764B6AC007ECD19 /* Build configuration list for PBXNativeTarget "advent-ui-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A0A6542764B6AC007ECD19 /* Debug */,
+				E7A0A6552764B6AC007ECD19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -800,6 +1223,11 @@
 			productName = Algorithms;
 		};
 		E7A0A613275F4B0A007ECD19 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A0A5E1275F3FE7007ECD19 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		E7A0A65A2764B750007ECD19 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7A0A5E1275F3FE7007ECD19 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;

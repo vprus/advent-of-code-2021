@@ -42,6 +42,9 @@
 		E7A0A6572764B6C2007ECD19 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A6212764AB57007ECD19 /* Day11.swift */; };
 		E7A0A65B2764B750007ECD19 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = E7A0A65A2764B750007ECD19 /* Algorithms */; };
 		E7A0A65C2764B769007ECD19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B4275A212F007ECD19 /* Utils.swift */; };
+		E7EECD382765E8E20004949D /* Day12.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD372765E8E20004949D /* Day12.swift */; };
+		E7EECD3A276733010004949D /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD39276733000004949D /* Day13.swift */; };
+		E7EECD3C27688A370004949D /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD3B27688A370004949D /* Day14.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,9 @@
 		E7A0A6452764B6AC007ECD19 /* advent-ui-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "advent-ui-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0A6492764B6AC007ECD19 /* advent_ui_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosUITests.swift; sourceTree = "<group>"; };
 		E7A0A64B2764B6AC007ECD19 /* advent_ui_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_ui_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7EECD372765E8E20004949D /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
+		E7EECD39276733000004949D /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
+		E7EECD3B27688A370004949D /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +239,9 @@
 				E7A0A6182761D823007ECD19 /* Day9.swift */,
 				E7A0A61F27633763007ECD19 /* Day10.swift */,
 				E7A0A6212764AB57007ECD19 /* Day11.swift */,
+				E7EECD372765E8E20004949D /* Day12.swift */,
+				E7EECD39276733000004949D /* Day13.swift */,
+				E7EECD3B27688A370004949D /* Day14.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -598,9 +607,12 @@
 				E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */,
 				E7A0A62027633763007ECD19 /* Day10.swift in Sources */,
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
+				E7EECD3A276733010004949D /* Day13.swift in Sources */,
+				E7EECD3C27688A370004949D /* Day14.swift in Sources */,
 				E7A0A6192761D823007ECD19 /* Day9.swift in Sources */,
 				E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */,
 				E7A0A5B3275A1EB0007ECD19 /* Day3.swift in Sources */,
+				E7EECD382765E8E20004949D /* Day12.swift in Sources */,
 				E7A0A5E0275F38A9007ECD19 /* Day7.swift in Sources */,
 				E7A0A5AF275A074B007ECD19 /* Day2.swift in Sources */,
 			);

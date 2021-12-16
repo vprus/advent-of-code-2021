@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E76214BF2769E100006855BD /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = E76214BE2769E100006855BD /* Collections */; };
+		E76214C12769E100006855BD /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = E76214C02769E100006855BD /* DequeModule */; };
+		E76214C32769E100006855BD /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = E76214C22769E100006855BD /* OrderedCollections */; };
+		E76214C62769F7A9006855BD /* SwiftPriorityQueue in Frameworks */ = {isa = PBXBuildFile; productRef = E76214C52769F7A9006855BD /* SwiftPriorityQueue */; };
+		E76214C8276B1E05006855BD /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76214C7276B1E05006855BD /* Day16.swift */; };
 		E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5AC2758F41E007ECD19 /* Day1.swift */; };
 		E7A0A5AF275A074B007ECD19 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5AE275A074B007ECD19 /* Day2.swift */; };
 		E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B0275A0B27007ECD19 /* Main.swift */; };
@@ -45,6 +50,7 @@
 		E7EECD382765E8E20004949D /* Day12.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD372765E8E20004949D /* Day12.swift */; };
 		E7EECD3A276733010004949D /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD39276733000004949D /* Day13.swift */; };
 		E7EECD3C27688A370004949D /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD3B27688A370004949D /* Day14.swift */; };
+		E7EECD3E2769C9850004949D /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EECD3D2769C9840004949D /* Day15.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E76214C7276B1E05006855BD /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
 		E7A0A5A22758E9F5007ECD19 /* advent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = advent; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0A5AC2758F41E007ECD19 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		E7A0A5AE275A074B007ECD19 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
@@ -134,6 +141,7 @@
 		E7EECD372765E8E20004949D /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
 		E7EECD39276733000004949D /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
 		E7EECD3B27688A370004949D /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
+		E7EECD3D2769C9840004949D /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +149,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76214BF2769E100006855BD /* Collections in Frameworks */,
 				E7A0A5E3275F3FE7007ECD19 /* Algorithms in Frameworks */,
+				E76214C62769F7A9006855BD /* SwiftPriorityQueue in Frameworks */,
+				E76214C32769E100006855BD /* OrderedCollections in Frameworks */,
+				E76214C12769E100006855BD /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +254,8 @@
 				E7EECD372765E8E20004949D /* Day12.swift */,
 				E7EECD39276733000004949D /* Day13.swift */,
 				E7EECD3B27688A370004949D /* Day14.swift */,
+				E7EECD3D2769C9840004949D /* Day15.swift */,
+				E76214C7276B1E05006855BD /* Day16.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -363,6 +377,10 @@
 			name = advent;
 			packageProductDependencies = (
 				E7A0A5E2275F3FE7007ECD19 /* Algorithms */,
+				E76214BE2769E100006855BD /* Collections */,
+				E76214C02769E100006855BD /* DequeModule */,
+				E76214C22769E100006855BD /* OrderedCollections */,
+				E76214C52769F7A9006855BD /* SwiftPriorityQueue */,
 			);
 			productName = advent;
 			productReference = E7A0A5A22758E9F5007ECD19 /* advent */;
@@ -528,6 +546,8 @@
 			mainGroup = E7A0A5992758E9F5007ECD19;
 			packageReferences = (
 				E7A0A5E1275F3FE7007ECD19 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				E76214BD2769E100006855BD /* XCRemoteSwiftPackageReference "swift-collections" */,
+				E76214C42769F7A9006855BD /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */,
 			);
 			productRefGroup = E7A0A5A32758E9F5007ECD19 /* Products */;
 			projectDirPath = "";
@@ -600,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A0A5B5275A212F007ECD19 /* Utils.swift in Sources */,
+				E7EECD3E2769C9850004949D /* Day15.swift in Sources */,
 				E7A0A6222764AB58007ECD19 /* Day11.swift in Sources */,
 				E7A0A61727610CFA007ECD19 /* Day8.swift in Sources */,
 				E7A0A5DE275DF527007ECD19 /* Day6.swift in Sources */,
@@ -609,6 +630,7 @@
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
 				E7EECD3A276733010004949D /* Day13.swift in Sources */,
 				E7EECD3C27688A370004949D /* Day14.swift in Sources */,
+				E76214C8276B1E05006855BD /* Day16.swift in Sources */,
 				E7A0A6192761D823007ECD19 /* Day9.swift in Sources */,
 				E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */,
 				E7A0A5B3275A1EB0007ECD19 /* Day3.swift in Sources */,
@@ -1218,6 +1240,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E76214BD2769E100006855BD /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E76214C42769F7A9006855BD /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davecom/SwiftPriorityQueue";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E7A0A5E1275F3FE7007ECD19 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
@@ -1229,6 +1267,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E76214BE2769E100006855BD /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E76214BD2769E100006855BD /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		E76214C02769E100006855BD /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E76214BD2769E100006855BD /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		E76214C22769E100006855BD /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E76214BD2769E100006855BD /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		E76214C52769F7A9006855BD /* SwiftPriorityQueue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E76214C42769F7A9006855BD /* XCRemoteSwiftPackageReference "SwiftPriorityQueue" */;
+			productName = SwiftPriorityQueue;
+		};
 		E7A0A5E2275F3FE7007ECD19 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7A0A5E1275F3FE7007ECD19 /* XCRemoteSwiftPackageReference "swift-algorithms" */;

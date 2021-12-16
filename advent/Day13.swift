@@ -16,6 +16,10 @@ struct Matrix: CustomStringConvertible {
         self.data = [[Int]](repeating: [Int](repeating: 0, count: columns), count: rows)
     }
     
+    subscript(r1: Int, r2: Int) -> Int {
+        return data[r1][r2]
+    }
+    
     // Dragon #1: this will work only for half-ranges, created with 0..<10 syntax.
     // It will not work for 0...10, because that produces a totally unrelated type (ClosedRange),
     // and there's no protocol shared between Range and ClosedRange
@@ -41,6 +45,16 @@ struct Matrix: CustomStringConvertible {
         }
     }
     
+    mutating func appendRight(_ another: Matrix) {
+        for r in 0...rows - 1 {
+            data[r].append(contentsOf: another.data[r])
+        }
+    }
+    
+    mutating func appendBottom(_ another: Matrix) {
+        data.append(contentsOf: another.data)
+    }
+    
     // Dragon #3: this would not be necessary in Python, since I can just use range
     // with negative stride. But as explained above, does not seem easily doable
     // in Swift.
@@ -51,10 +65,14 @@ struct Matrix: CustomStringConvertible {
     func flipLeftRight() -> Matrix {
         return Matrix(data: data.map({$0.reversed()}))
     }
+    
+    func map(_ mapper: (Int) -> Int) -> Matrix {
+        return Matrix(data: data.map({ $0.map(mapper) }))
+    }
         
     var description: String {
         return data.map({
-            $0.map({ $0 == 0 ? "." : "#" }).joined()
+            $0.map({String($0)}).joined()
         }).joined(separator: "\n")
     }
 }

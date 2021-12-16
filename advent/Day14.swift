@@ -9,6 +9,9 @@ extension Sequence {
     func combineCounts<Key>() -> [Key: Int]  where Element == (Key, Int) {
         self.reduce(into: [Key: Int](), { $0[$1.0, default: 0] += $1.1 })
     }
+    func toDictionary<Key, Value>() -> [Key: Value] where Element == (Key, Value) {
+        [Key: Value](uniqueKeysWithValues: self)
+    }
 }
 
 func day14() throws {
@@ -16,14 +19,15 @@ func day14() throws {
     
     let s = lines[0]
     var pairCounts = s.windows(ofCount: 2).map({ String($0) }).elementCounts()
-    let rules = lines[1...].filter{ $0.count > 0 }.map { Array($0) }.map { (String([$0[0], $0[1]]), $0[6]) }
+    let rules = lines[1...].map { Array($0) }.map { (String([$0[0], $0[1]]), $0[6]) }.toDictionary()
     
     for _ in 1...40 {
         pairCounts = pairCounts.flatMap({ pair -> [(String, Int)] in
-            if let rule = rules.first(where: { String($0.0) == pair.key }) {
-                return [(String([rule.0.first!, rule.1]), pair.value), (String([rule.1, rule.0.last!]), pair.value)]
+            if let r = rules[pair.key] {
+                return [(String([pair.key.first!, r]), pair.value),
+                        (String([r, pair.key.last!]), pair.value)]
             }
-            return [(pair.key, pair.value)]
+            return [pair]
         }).combineCounts()
     }
     

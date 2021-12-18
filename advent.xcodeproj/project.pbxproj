@@ -12,6 +12,7 @@
 		E76214C32769E100006855BD /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = E76214C22769E100006855BD /* OrderedCollections */; };
 		E76214C62769F7A9006855BD /* SwiftPriorityQueue in Frameworks */ = {isa = PBXBuildFile; productRef = E76214C52769F7A9006855BD /* SwiftPriorityQueue */; };
 		E76214C8276B1E05006855BD /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76214C7276B1E05006855BD /* Day16.swift */; };
+		E76214CA276CCDA5006855BD /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76214C9276CCDA4006855BD /* Day17.swift */; };
 		E7A0A5AD2758F41E007ECD19 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5AC2758F41E007ECD19 /* Day1.swift */; };
 		E7A0A5AF275A074B007ECD19 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5AE275A074B007ECD19 /* Day2.swift */; };
 		E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0A5B0275A0B27007ECD19 /* Main.swift */; };
@@ -98,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		E76214C7276B1E05006855BD /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
+		E76214C9276CCDA4006855BD /* Day17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
 		E7A0A5A22758E9F5007ECD19 /* advent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = advent; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0A5AC2758F41E007ECD19 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		E7A0A5AE275A074B007ECD19 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				E7EECD3B27688A370004949D /* Day14.swift */,
 				E7EECD3D2769C9840004949D /* Day15.swift */,
 				E76214C7276B1E05006855BD /* Day16.swift */,
+				E76214C9276CCDA4006855BD /* Day17.swift */,
 			);
 			path = advent;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				E7A0A5DB275CAD46007ECD19 /* Day5.swift in Sources */,
 				E7A0A5D9275B9209007ECD19 /* Day4.swift in Sources */,
 				E7A0A62027633763007ECD19 /* Day10.swift in Sources */,
+				E76214CA276CCDA5006855BD /* Day17.swift in Sources */,
 				E7A0A5B1275A0B27007ECD19 /* Main.swift in Sources */,
 				E7EECD3A276733010004949D /* Day13.swift in Sources */,
 				E7EECD3C27688A370004949D /* Day14.swift in Sources */,

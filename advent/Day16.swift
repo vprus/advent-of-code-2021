@@ -1,17 +1,6 @@
 
 import Foundation
 
-func parseBits<T: Sequence>(_ bits: T) -> Int where T.Element == Int {
-    bits.reduce(0, { $0 * 2 + $1 })
-}
-
-func hexToBits(_ hex: String) -> [Int] {
-    hex.flatMap({ ds -> [Int] in
-        let d = Int(String(ds), radix: 16)!
-        return [d & 8, d & 4, d & 2, d & 1]
-    }).map({ ($0 > 0) ? 1 : 0 })
-}
-
 struct Packet {
     let version: Int
     let type: Int
@@ -40,55 +29,72 @@ struct Packet {
         default: return Int.max
         }
     }
+}
+
+func parseBits<T: Sequence>(_ bits: T) -> Int where T.Element == Int {
+    bits.reduce(0, { $0 * 2 + $1 })
+}
+
+func hexToBits(_ hex: String) -> [Int] {
+    hex.flatMap({ ds -> [Int] in
+        let d = Int(String(ds), radix: 16)!
+        return [d & 8, d & 4, d & 2, d & 1]
+    }).map({ ($0 > 0) ? 1 : 0 })
+}
+
+func parse(_ xbits: ArraySlice<Int>) -> (Packet, ArraySlice<Int>)  {
+    var bits = xbits
     
-    static func parse<T: RandomAccessCollection>(_ bits: T, nesting: String = "") throws -> (Packet, Int) where T.Element == Int, T.Index == Int {
-        print("\(nesting)Parsing \(bits.map({ String($0) }).joined())")
-        let version = parseBits(bits[0...2])
-        let type = parseBits(bits[3...5])
-        var subs = [Packet]()
-        print("\(nesting)Type is \(type)")
-        if (type == 4) {
-            print("\(nesting)Parsing value")
-            var valueBits = [Int]()
-            for i in stride(from: 6, to: bits.count, by: 5) {
-                valueBits.append(contentsOf: bits[i+1...i+4])
-                if bits[i] == 0 {
-                    print("\(nesting)Value packet \(version): \(parseBits(valueBits))")
-                    return (Packet(version: version, type: type, literal: parseBits(valueBits), subs: subs), i+5)
-                }
+    func parseValue(_ n: Int) -> Int { let r = parseBits(bits.prefix(n)); bits = bits.suffix(from: bits.startIndex.advanced(by: n)); return r }
+    func parseSub() -> Packet { let (r, b) = parse(bits); bits = b; return r }
+  
+    let version = parseValue(3)
+    let type = parseValue(3)
+    var subs = [Packet]()
+    if (type == 4) {
+        var literal = 0
+        while true {
+            let n = parseValue(5)
+            literal = literal << 4 | (n & 0xF)
+            if (n & 0x10) == 0 {
+                break
             }
-        } else {
-            var i = 0
-            var shouldStop: () -> Bool
-            if bits[6] == 0 {
-                let subpacketBits = parseBits(bits[7..<(7+15)])
-                print("\(nesting)Subpacket bits: \(subpacketBits)")
-                i = 7 + 15
-                shouldStop = { i >= (7 + 15) + subpacketBits }
-            } else {
-                let subpacketsCount = parseBits(bits[7..<(7+11)])
-                print("\(nesting)Subpacket count: \(subpacketsCount)")
-                i = 7 + 11
-                shouldStop = { subs.count >= subpacketsCount }
-            }
-            
-            while true {
-                print("\(nesting)Parsing at \(i)")
-                let r = try Packet.parse(Array(bits[i...]), nesting: nesting + "    ")
-                subs.append(r.0)
-                i += r.1
-                if shouldStop() {
-                    break
-                }
-            }
-            return (Packet(version: version, type: type, literal: nil, subs: subs), i)
         }
-        throw Errors.otherError(message: "Unexpected end of parsing")
+        return (Packet(version: version, type: type, literal: literal, subs: subs), bits)
+    } else {
+        if parseValue(1) == 0 {
+            let subpacketBits = parseValue(15)
+            let tail = bits.suffix(from: bits.startIndex.advanced(by: subpacketBits))
+            bits = bits.prefix(subpacketBits)
+            while !bits.isEmpty {
+                subs.append(parseSub())
+            }
+            return (Packet(version: version, type: type, literal: nil, subs: subs), tail)
+        } else {
+            for _ in 0..<parseValue(11) {
+                subs.append(parseSub())
+            }
+            return (Packet(version: version, type: type, literal: nil, subs: subs), bits)
+        }
     }
+    return (Packet(version: version, type: type, literal: nil, subs: subs), bits)
 }
 
 func day16() throws {
+    let test = [1, 2, 3, 4, 5, 6, 7, 8]
+    let slice = test[4...]
+    // The line below crashes, because array slice has the same indexes
+    // as the original array, and the first index is '4'. Which means that
+    // to index a slice, one has to remember the start index, and one might
+    // as well index the original array.
+    //
+    // No other language I know does this.
+    // print(slice[0..<2])
+    // The below works, but is way to much typing.
+    print(slice[slice.startIndex...slice.startIndex.advanced(by: 2)])
+
     let lines = try input(day: 16)
-    let p = try Packet.parse(hexToBits(lines[0]))
+    let p = parse(hexToBits(lines[0])[0...])
+    print(p.0.sumOfVersions())
     print(p.0.value())
 }

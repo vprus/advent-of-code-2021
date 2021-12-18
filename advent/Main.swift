@@ -10,6 +10,6 @@ import Foundation
 @main
 struct Main {
     static func main() async throws {
-        try day17()
+        try day18()
     }
 }

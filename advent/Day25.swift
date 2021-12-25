@@ -2,17 +2,6 @@
 import Foundation
 
 func day25() throws {
-    let lines_ = """
-v...>>.vv>
-.vv>>.vv..
->>.>v>...v
->>v>>.>.v.
-v>v.vv.v..
->.>>..v...
-.vv..>.>v.
-v.v..>>v.v
-....v..v.>
-""".components(separatedBy: "\n")
     let lines = try input(day: 25)
     
     var state = lines.map({ $0.map({ String($0) }) })
@@ -66,10 +55,5 @@ v.v..>>v.v
             print("Last step with change \(step)")
             break
         }
-        print("\n\nStep \(step)")
-        //printState()
     }
-    
-    
-    
 }

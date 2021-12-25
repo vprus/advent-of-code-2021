@@ -3,4 +3,90 @@
    uuid = "72A1E239-3A5E-47EA-950E-A736F6802C92"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "442F951E-C2E9-4E9A-A567-D56DDB9BDDB4"
+            shouldBeEnabled = "No"
+            condition = "operands[0].id == 93 &amp;&amp; operands[1].id == 84"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "advent/Day24.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
+            landmarkName = "optimizeInner(cache:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "371DAB15-2DF2-411A-9263-672C0C8447F0"
+            shouldBeEnabled = "No"
+            condition = "id == 390"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "advent/Day24.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "constrain(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E857F14-E88C-451D-B1CE-9A5E7C023645"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "advent/Day24.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "evaluate(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41B57DBD-5C84-4A8F-8A5B-1AFD4C524A92"
+            shouldBeEnabled = "No"
+            condition = "id == 376"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "advent/Day24.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "optimizeInner(cache:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1C7EADB-B965-416D-8FF4-6D36EC709ACB"
+            shouldBeEnabled = "No"
+            condition = "id == 376"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "advent/Day24.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "optimizeInner(cache:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

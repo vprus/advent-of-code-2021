@@ -15,26 +15,9 @@
             filePath = "advent/Day24.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "optimizeInner(cache:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "371DAB15-2DF2-411A-9263-672C0C8447F0"
-            shouldBeEnabled = "No"
-            condition = "id == 390"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "advent/Day24.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "constrain(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -65,8 +48,8 @@
             filePath = "advent/Day24.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "optimizeInner(cache:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -82,8 +65,8 @@
             filePath = "advent/Day24.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "optimizeInner(cache:)"
             landmarkType = "7">
          </BreakpointContent>

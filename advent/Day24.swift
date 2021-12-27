@@ -91,110 +91,6 @@ class DasPointer: CustomStringConvertible {
         }
     }
         
-    func constrain(_ value: ClosedRange<Int>, _ visited: inout [Int: ClosedRange<Int>]) {
-        if let c = visited[id] {
-            if !(value.lowerBound > c.lowerBound || value.upperBound < c.upperBound) {
-                return
-            }
-        }
-        visited[id] = value
-        
-        if case let .input(i) = p {
-            print("INPUT \(i) seem to matter \(value)")
-        }
-        
-        if case let .op(op, operands) = p {
-            updateRange(value)
-            
-            if op == "add" && range?.lowerBound == value.lowerBound && range?.lowerBound == value.upperBound {
-                operands.forEach({ $0.constrain($0.range!.lowerBound...$0.range!.lowerBound, &visited) })
-            } else if op == "add" && operands[0].range!.lowerBound >= 0 && operands[1].range!.lowerBound >= 0 {
-                operands[0].constrain(Int.min...range!.upperBound, &visited)
-                operands[1].constrain(Int.min...range!.upperBound, &visited)
-            }
-            
-            else if op == "mul" && range?.lowerBound == 0 && range?.upperBound == 0 {
-                if let r = operands[0].range, r.lowerBound > 0 {
-                    operands[1].constrain(0...0, &visited)
-                } else if let r = operands[1].range, r.lowerBound > 0 {
-                    operands[0].constrain(0...0, &visited)
-                }
-            } else if op == "div" && range?.lowerBound == 0 && range!.upperBound == 0 {
-                if let r = operands[1].range, r.lowerBound == r.upperBound && r.lowerBound > 0 {
-                    operands[0].constrain(Int.min...(r.lowerBound-1), &visited)
-                }
-            } else {
-                operands.forEach({ $0.constrain(Int.min...Int.max, &visited) })
-            }
-            
-            /*
-                
-            if (op == "add" && range != nil && range?.lowerBound == 0) {
-                    print("add, value at min of range")
-                    operands.forEach({ $0.constrain($0.range!.lowerBound, &visited) })
-                } else if (op == "mul" && value == 0) {
-                    if let r = operands[0].range, r.lowerBound > 0 {
-                        operands[0].constrain(Int.max, &visited)
-                        operands[1].constrain(0, &visited)
-                    } else if let r = operands[1].range, r.lowerBound > 0 {
-                        operands[0].constrain(0, &visited)
-                        operands[1].constrain(Int.max, &visited)
-                    }
-                } else if (op == "eql" && value == 0) {
-                    if case let .literal(v) = operands[0].p {
-                        operands[0].constrain(nil, &visited)
-                        operands[1].constrain(v, &visited)
-                    } else if case let .literal(v) = operands[1].p {
-                        operands[0].constrain(v, &visited)
-                        operands[1].constrain(nil, &visited)
-                    }
-                } else if op == "div" && value == 0 {
-                    //
-                    //operands[1].constrain(nil, &visited)
-                }
-                else {
-                    operands.forEach({ $0.constrain(nil, &visited) })
-                }
-            } else {
-                operands.forEach({ $0.constrain(nil, &visited) })
-            }*/
-        }
-    }
-    
-    func constrain(_ value: Int) {
-        var visited = [Int: ClosedRange<Int>]()
-        constrain(value...value, &visited)
-    }
-    
-    func uniqueCount(_ visited: inout Set<Int>) -> Int {
-        guard visited.insert(self.id).inserted else {
-            return 0
-        }
-        if case let .op(op, operands) = self.p {
-            if case .input = operands[0].p {
-                print("input used on left of \(op)")
-            }
-            if case .input = operands[1].p {
-                print("input used on right of \(op)")
-            }
-            
-            
-            return 1 + operands.map({ $0.uniqueCount(&visited) }).reduce(0, { $0 + $1 })
-        }
-        return 0
-    }
-    
-    /*
-    func visit<R>(handle: (AluExpression, [R]) -> R) {
-        
-    }
-    
-    func visit<R>(_ visited: inout Set<Int>) -> Int {
-        guard visited.insert(self.id).inserted else {
-            return 0
-        }
-    }*/
-    
     func optimize() -> (DasPointer, Bool) {
         var cache = [Int: DasPointer]()
         return optimize(cache: &cache)
@@ -307,8 +203,6 @@ class DasPointer: CustomStringConvertible {
         return (self, false)
     }
     
-    
-    
     var description: String {
         switch self.p {
         case let .input(i): return "\(id): input \(i)" + (range != nil ? " range \(range!)" : "")
@@ -327,163 +221,12 @@ indirect enum AluExpression {
     case register(r: Int)
     case literal(v: Int)
     case op(op: String, operands: [DasPointer])
-    
-    var count: Int {
-        if case let .op(_, operands) = self {
-            return operands.map({ $0.p.count }).reduce(0, { $0 + $1 })
-        } else {
-            return 1
-        }
-    }
-}
-
-struct AluState: Equatable {
-    var registers = [Int](repeating: 0, count: 4)
-    var ip = 0
-    var valid = true
-}
-
-enum AluOperand: CustomStringConvertible {
-    case register(r: Int)
-    case literal(v: Int)
-    
-    init(_ s: String) {
-        if let i = ["w", "x", "y", "z"].firstIndex(of: s) {
-            self = .register(r: i)
-        } else {
-            self = .literal(v: Int(s)!)
-        }
-    }
-    
-    var description: String {
-        switch self {
-        case let .register(r): return ["w", "x", "y", "z"][r]
-        case let .literal(v): return String(v)
-        }
-    }
-    
-    func evaluate(_ state: inout AluState) -> Int {
-        switch self {
-        case let .register(r): return state.registers[r]
-        case let .literal(v): return v
-        }
-    }
-    
-    func staticValue(_ knownValues: [Int?]) -> Int? {
-        switch self {
-        case let .register(r): return knownValues[r]
-        case let .literal(v): return v
-        }
-    }
-}
-
-struct AluOperator: CustomStringConvertible {
-    var op: String
-    var operands: [AluOperand]
-    
-    var description: String {
-        return op + " " + operands.map({ $0.description }).joined(separator: " ")
-    }
-    
-    init(_ s: String) {
-        let pieces = s.split(separator: " ")
-        op = String(pieces[0])
-        operands = pieces[1...].map({ AluOperand(String($0)) })
-    }
-    
-    func evaluate(_ operands: [Int]) -> Int? {
-        switch op {
-        case "add": return operands[0] + operands[1]
-        case "mul": return operands[0] * operands[1]
-        case "div" : if (operands[1] == 0) {
-            return nil
-        } else {
-            return operands[0] / operands[1]
-        }
-        case "mod": if (operands[0] < 0 || operands[1] <= 0) {
-            return nil
-        } else {
-            return (operands[0] % operands[1])
-        }
-        case "eql": return (operands[0] == operands[1] ? 1 : 0)
-        default: assert(false, "invalid operator \(op)")
-        }
-        return nil
-    }
-    
-    func evaluate(_ state: inout AluState, nextInput: Int?) -> AluState {
-        var result = state
-        func store(_ v: Int) {
-            if case let AluOperand.register(r) = operands[0] {
-                result.registers[r] = v
-            }
-        }
-        
-        if op == "inp" {
-            store(nextInput!)
-        } else {
-            if let v = evaluate(operands.map({ $0.evaluate(&state) })) {
-                store(v)
-            } else {
-                result.valid = false
-            }
-        }
-        
-        result.ip = result.ip + 1
-        
-        return result
-    }
-    
 }
 
 struct SearchState {
     var z: Int
-    //var input: [Int]
     var inputAsNumber: Int
 }
-
-
-/*
-class AluProgram {
-    var operators: [AluOperator]
-    
-    init(_ ops: [AluOperator]) {
-        operators = ops
-    }
-}
-
-struct AluSearchState: Comparable {
-    var aluState: AluState = AluState()
-    var score: Int = 0
-    var inputDigit = 13
-    
-    mutating func explore(_ program: AluProgram) -> [AluSearchState] {
-        if (program.operators[aluState.ip].op == "inp") {
-            return (1...9).map({ input -> AluSearchState in
-                let ns = program.operators[aluState.ip]
-                return AluSearchState(
-                    aluState: ns.evaluate(&aluState, nextInput: input),
-                    // Uhm?
-                    score: score + (input * (pow(10, inputDigit) as NSDecimalNumber).intValue),
-                    inputDigit: inputDigit - 1
-                )
-            })
-        } else {
-            return [AluSearchState(
-                aluState: program.operators[aluState.ip].evaluate(&aluState, nextInput: nil),
-                score: score,
-                inputDigit: inputDigit)].filter({ $0.aluState.valid })
-        }
-    }
-    
-    static func == (lhs: AluSearchState, rhs: AluSearchState) -> Bool {
-        return lhs.aluState == rhs.aluState && lhs.score == rhs.score && lhs.inputDigit == rhs.inputDigit
-    }
-    
-    static func < (lhs: AluSearchState, rhs: AluSearchState) -> Bool {
-        return lhs.score < rhs.score
-    }
-}*/
 
 func day24() throws {
     let lines = try input(day: 24)
@@ -508,13 +251,6 @@ mod w 2
            return .literal(v: Int(s)!)
        }
     }
-    let xxx = lines[0] == lines[18]
-    print("XXX \(xxx)")
-    //for j in 1..{
-    //    if lines[0..<18] == lines[(j*18)..<(j*18 + 18)] {
-    //        print("\(j) OK")
-    //    }
-    //}
     
     var searchStates = [SearchState(z: 0, inputAsNumber: 0)]
     
@@ -548,13 +284,14 @@ mod w 2
         for i in 3...3 {
             var f = registerValues[i]
             
+            /*
             for _ in 1...10 {
                 let (nf, changed) = f.optimize()
                 if (!changed) {
                     break
                 }
                 f = nf
-            }
+            }*/
             
             print("Processign step \(piece)")
             
@@ -585,192 +322,4 @@ mod w 2
     }
     
     print(searchStates.filter({ $0.z == 0 }).map({ $0.inputAsNumber }).min())
-        
-    //print(registerValues[3].treeString())
-    
-   
-    
-    //f.constrain(0)
-    
-    //print(f.treeString())
-    
-    /*
-    var count = 0
-outer:
-    while true {
-        if count % 10000 == 0 {
-            print(candidate)
-        }
-        count += 1
-        let v = f.evaluate(candidate)
-        if v == 0 {
-            print("Found", candidate)
-            break
-        }
-        var i = candidate.count - 1
-        while i >= 0 {
-            candidate[i] -= 1
-            if candidate[i] >= 1 {
-                break
-            }
-            candidate[i] = 9
-            i -= 1
-            if i < 0 {
-                break outer
-            }
-        }
-    }*/
-    
-    
-    /*
-    for a in 1...9 {
-        for b in 1...9 {
-            for c in 1...9 {
-                candidate[0] = a
-                candidate[1] = b
-                candidate[2] = c
-                let r = f.evaluate(candidate) == 0 ? 0 : 1
-                if r == 0 {
-                    print("we're done")
-                }
-            }
-        }
-    }*/
-    
-    
-    //print(f.evaluate(candidate))
-    
-    //f.constrain(0)
-    
-    //print(f.treeString())
-    
-    //f.constrain(0)
-    
-    
-    //print(f)
-    
-    //registerValues.forEach({ print($0.p.count) })
-    
-    
-    
-    
-    
-    //var operators = lines.map({ AluOperator($0) })
-    //print("\(operators.count) operators")
-    //let program = AluProgram(operators)
-    
-    /*
-    
-    
-    var knownValues = [Int?](repeating: 0, count: 4)
-    
-    var i = 0
-    while i < operators.count {
-        let c = operators[i]
-        print("i = \(i): \(c) \(knownValues)")
-        
-        if c.op == "div" {
-            if case .literal(1) = c.operands[1] {
-                // Division by 1 has no effect, drop it
-                operators.remove(at: i)
-                continue
-            }
-        }
-        
-        if c.op == "inp", case let .register(r) = c.operands[0] {
-            knownValues[r] = nil
-        } else if let kl = c.operands[0].staticValue(knownValues), let kr = c.operands[1].staticValue(knownValues) {
-            // Both operands are statically known
-            if case let .register(r) = c.operands[0] {
-                knownValues[r] = c.evaluate([kl, kr])
-            }
-            operators.remove(at: i)
-            continue
-        } else if c.op == "mul", let kr = c.operands[1].staticValue(knownValues), kr == 0 {
-            if case let .register(r) = c.operands[0] {
-                knownValues[r] = 0
-            }
-            operators.remove(at: i)
-            continue
-        } else if case let .register(r) = c.operands[0] {
-            print("Resetting \(r)")
-            knownValues[r] = nil
-        }
-        
-        i += 1
-    }
-    
-    print("\(operators.count) operators after optimization")
-    operators.forEach({ print($0) })*/
-     
-    
-    
-    /*
-    let constraints = [
-        [],
-        [],
-        [],
-        [0]
-    ]
-    let inputContstraints = [
-    ]
-    */
-    
-    /*
-    
-    
-    let input = "99999999999999".map({ Int(String($0))! })
-    //let input = [13]
-
-    
-    var searchState = AluSearchState()
-    
-    var queue = PriorityQueue<AluSearchState>(ascending: false, startingValues: [searchState])
-    
-    while !queue.isEmpty {
-        //print("In queue: \(queue.count)")
-        var s = queue.pop()!
-        //print(s)
-        if (s.aluState.ip == program.operators.count) {
-            if (s.aluState.registers[3] == 0) {
-                print("Final state: \(s)")
-                break;
-            } else {
-                continue;
-            }
-            
-        }
-        s.explore(program).forEach({ queue.push($0)})
-    }*/
-    
-    /*
-    
-    var e = searchState.explore(program)
-    e.forEach({ print($0) })
-    
-    print("----")
-    
-    print(e[0].explore(program))*/
-    
-    
-    /*
-    
-    var state = AluState()
-    var i = 0
-    
-    while state.ip < program.operators.count && state.valid {
-        print("ip = \(state.ip): \(program.operators[state.ip])")
-        if program.operators[state.ip].op == "inp" {
-            state = program.operators[state.ip].evaluate(&state, nextInput: input[i])
-            i += 1
-        } else {
-            state = program.operators[state.ip].evaluate(&state, nextInput: nil)
-        }
-        print(state)
-    }*/
-    
-    
-    //print(input)
-    
-    //print(operators)
 }
